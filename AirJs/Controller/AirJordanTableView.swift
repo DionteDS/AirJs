@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     let shoeModel = AirJordanModel().ajShoes // array to hold the shoes ajShoes objects
-    var row = 0
+    var row = 0 // To hold the indexPathForSelectRow.row
     
     override func viewDidLoad() {
         super.viewDidLoad()
