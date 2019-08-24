@@ -56,6 +56,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             row = rowIndex
         }
         self.performSegue(withIdentifier: "infoTableView", sender: self)
+        
+        // Deselect the indexPath row after selecting a row
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
