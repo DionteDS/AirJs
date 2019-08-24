@@ -52,7 +52,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // when a row is selected store the selected indexPath row to the variable row
     // Then go to SelectedViewController segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        row = tableView.indexPathForSelectedRow!.row
+        if let rowIndex = tableView.indexPathForSelectedRow?.row {
+            row = rowIndex
+        }
         self.performSegue(withIdentifier: "infoTableView", sender: self)
     }
     
